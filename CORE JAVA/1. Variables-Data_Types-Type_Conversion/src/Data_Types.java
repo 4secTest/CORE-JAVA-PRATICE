@@ -10,4 +10,3 @@ public class Data_Types {
         boolean you;
     }
 }
-    
