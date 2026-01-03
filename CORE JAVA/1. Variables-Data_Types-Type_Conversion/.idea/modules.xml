@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/1. Variables-Data_Types-Type_Conversion.iml" filepath="$PROJECT_DIR$/1. Variables-Data_Types-Type_Conversion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../2. Operators-If Else - Number System/2. Operators-If Else - Number System.iml" filepath="$PROJECT_DIR$/../2. Operators-If Else - Number System/2. Operators-If Else - Number System.iml" />
     </modules>
   </component>
 </project>
