@@ -71,5 +71,7 @@ public class Data_Types {
         char ch = 'a';
         System.out.println((int)ch);
 
+        //here we can have more examples but these are enough
+
     }
 }
