@@ -1,4 +1,5 @@
-secret.txt
-.env
 .idea/
-node_modules/
+out/
+*.iml
+.DS_Store
+*.log   
