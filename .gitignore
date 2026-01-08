@@ -3,3 +3,13 @@ out/
 *.iml
 .DS_Store
 *.log   
+.gitignore
+node_modules/   
+dist/
+.env
+.vscode/
+coverage/
+*.bak
+*.tmp
+*.swp
+thumbs.db
