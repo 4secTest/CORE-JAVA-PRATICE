@@ -1,14 +1,8 @@
 import java.lang.reflect.Field;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
-
+import java.util.*;
 
 public class ArrayLists {
     static void main() {
-
-
 
   ArrayList<Integer> list = new ArrayList<Integer>();
         list.add(1);
@@ -143,6 +137,29 @@ public class ArrayLists {
         Integer[] array1 = table.toArray(new Integer[0]);
 
         System.out.println(array1.getClass().getName());
+
+
+        //shorting in arraylist
+
+        ArrayList<Integer> shortingList = new ArrayList<>();
+
+        shortingList.add(2);
+        shortingList.add(23);
+        shortingList.add(245);
+        shortingList.add(1);
+        shortingList.add(25);
+
+        Collections.sort(shortingList);
+        System.out.println(shortingList);
+
+        shortingList.add(3);
+        shortingList.add(545);
+        shortingList.add(2);
+        shortingList.add(66);
+
+        shortingList.sort(null);  // comparator
+
+        System.out.println(shortingList);
 
     }
 
