@@ -187,3 +187,53 @@ Common patterns:
     Methods initiate processes (like starting a thread or sending a message).
 
 These results are “produced” by actions, not by returning a value.
+
+
+
+
+************************* (definition + anatomy) ***********************
+
+1. What is a method in Java, and why do we use methods instead of writing everything inside main?
+
+
+    A method in Java is a block of code within a class that performs a specific task. Methods can accept input (parameters) and return a value.
+    We use methods instead of writing everything in the main method because:
+        Methods make code reusable.
+        They keep code organized and easier to read.
+        Methods simplify debugging and testing.
+        They avoid repetition of code.
+        In teamwork, methods help divide the work.
+    If you put all the logic in the main method, your code becomes complicated, hard to maintain, and difficult to reuse.
+
+    
+    No, Java does not allow you to declare a method directly inside the main method or any other method.
+    Methods must be declared inside a class but outside of other methods.
+    If you try to declare a method inside the main method, you will get a syntax error.
+    The correct approach is to declare all methods at the class level, and then call them from main or other methods.
+
+************************* (Return type and Return) ***********************
+
+2. What does return do? What’s the difference between return; and return value; ? 
+
+    The return statement is used to exit a method and optionally send a value back to the place where the method was called.
+    When a method reaches a return statement, it ends right there. No further code in that method will run.
+
+3. Can a void method return a value? Can a non-void method omit return? Explain compiler behavior.
+
+A method with void return type means it doesn’t send any value back.
+You can write return; to simply end the method early, but you cannot write return something; (like return 5; or return "abc";) inside a void method.
+
+No, a non-void method must always return a value.
+
+    If a method is declared to return a value (like int, String, etc.), it MUST have a return statement that provides a value of that type.
+    If you forget to return a value, compiler will show an error:
+    “Missing return statement”
+    All code paths must return a value.
+
+4. What is “unreachable code” in relation to return and how can it happen?
+
+Unreachable code means code that the compiler detects will never execute.
+It often happens when you place statements after a return in a method, because return exits the method and any code after it cannot be run.'
+
+************************* (Scope & lifetime) ***********************
+
