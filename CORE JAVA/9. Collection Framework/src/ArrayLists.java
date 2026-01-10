@@ -2,6 +2,54 @@ import java.lang.reflect.Field;
 import java.util.*;
 
 public class ArrayLists {
+    static class integerComparator implements Comparator<Integer>{
+
+
+        @Override
+        public int compare(Integer o1, Integer o2) {
+
+            // here we have 2 variable o1 nd o2 ok you if we need
+//            to sort the array then that is the trick
+            return o2 - o1;
+
+            // 5 3
+            //3 5
+
+//            for decending order
+//            return o2 - o3;
+//            if here is the result in negative then o1 will stay that place
+//                    if the result is in the positive then o1 goes to the o2 position
+        }
+    }
+
+    static class StringLengthComparator implements Comparator<String>{
+
+// We  can write the logic here what we want to compare
+        // like in which order you want to sort the things
+
+        @Override
+        public int compare(String o1, String o2) {
+
+            return o2.length() - o1.length();
+        }
+    }
+
+class Student{
+        private String name;
+        private double gpa;
+
+
+        public Student(String name, double gpa){
+            this.name = name;
+        this.gpa = gpa;
+}
+
+public String getName () {return name;}
+
+    public double getGpa() {
+        return gpa;
+    }
+
     static void main() {
 
   ArrayList<Integer> list = new ArrayList<Integer>();
@@ -157,10 +205,24 @@ public class ArrayLists {
         shortingList.add(2);
         shortingList.add(66);
 
-        shortingList.sort(null);  // comparator
+        shortingList.sort(new integerComparator());  // comparator natural order of shorting
 
         System.out.println(shortingList);
 
+
+        List<String> Words = Arrays.asList("mango", "banana", "date");
+
+        Words.sort( new StringLengthComparator());
+        System.out.println(Words);
+
+        // Lembda expression\
+
+
+        Words.set(2 ,"YOutube");
+
+        Words.sort((a, b) -> a.length() - b.length());
+        System.out.println(Words);
     }
 
-}
+
+} }
