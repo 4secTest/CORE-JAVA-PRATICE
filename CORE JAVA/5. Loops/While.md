@@ -120,3 +120,42 @@ Behavior in Detail
 12. How does a while loop behave when working with user input?
 
  while loops are great for interactive scenarios where you need to repeatedly prompt the user until a condition is met (e.g., valid input or exit). They handle uncertainty well since you don't know how many attempts the user will take.
+
+
+
+
+************************** Pattern *************************
+
+Loops Solve Karne Ka Pattern (Step-by-Step)
+
+    Problem Samajho:
+        Kya karna hai? (e.g., numbers print karo, sum calculate karo, user input lo).
+        Kitni baar repeat karna hai? (fixed count ya condition-based?).
+        Input/Output kya hai? (e.g., range 1 to 10, ya jab tak user "quit" na bole).
+
+    Loop Type Choose Karo:
+        For Loop: Agar count pata ho (e.g., 10 times loop).
+        While Loop: Agar condition pata ho, lekin count nahi (e.g., jab tak file end na ho).
+        Do-While Loop: Agar kam se kam ek baar chalana ho (e.g., menu show karo, phir repeat).
+
+    Variables Initialize Karo:
+        Loop ke bahar declare karo jo zaruri ho (e.g., int i = 0;, int sum = 0;).
+        Scanner ya file reader agar input ke liye ho.
+
+    Condition Likho:
+        While ke liye: while (condition) (e.g., while (i < 10)).
+        Ensure condition false ho sake (warna infinite loop).
+
+    Loop Body Likho:
+        Code jo repeat hoga (e.g., print, calculate, input read).
+        Variables update karo (e.g., i++, sum += num).
+        Break/Continue agar special cases ho.
+
+    Termination Check Karo:
+        Loop end hone ke baad kya karna? (e.g., result print karo).
+        Agar infinite lag raha ho, debug karo (print statements add karo).
+
+    Test Karo (Edge Cases):
+        Normal case: Expected input.
+        Edge cases: Empty input, max/min values, invalid data.
+        Run karo aur check: Infinite? Wrong output?
