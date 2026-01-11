@@ -1,7 +1,8 @@
-import org.w3c.dom.Node;
+package List;
 
+import java.util.Arrays;
 import java.util.LinkedList;
-import java.util.List;
+
 public class LInkedList {
     static void main() {
 
@@ -20,9 +21,25 @@ public class LInkedList {
         linkedList.add(12);
         linkedList.add(133);
 
+        System.out.println (linkedList.get(3)); // O(n) because loop
 
+        linkedList.addLast(3); // O(1)
+        linkedList.addFirst(3); // O(1)
 
+        System.out.println(linkedList);
+        System.out.println(linkedList.getFirst());
+        System.out.println(linkedList.getLast());
 
+        linkedList.remove(null);
+        linkedList.remove(1);
+        linkedList.removeIf(x -> x % 2 == 0);
+        System.out.println(linkedList);
+
+        LinkedList<String> animals = new LinkedList<>(Arrays.asList("Cat", "dog", "cow"));
+        LinkedList<String> animalsToRemove = new LinkedList<>(Arrays.asList("Cat", "dog", "elephant", "lion"));
+
+        animals.removeAll(animalsToRemove);
+        System.out.println(animals);
 
 
     }
